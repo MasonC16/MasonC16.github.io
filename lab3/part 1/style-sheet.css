@@ -1,0 +1,41 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	 }
+
+/*the header at the top of the website and stuff to properly format it*/
+h1 {
+	color: hotpink;
+	font-size: 2em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-bottom: 10px dotted purple;
+	}
+	
+/*the header for the contact information header and stuff to properly format it*/
+h2 {
+	font-size: 1.5em;
+	font-style: italic;
+	}
+
+.job-title {
+	color: #999999;
+	font-weight: bold;
+		   }
+
+/*created it so that when you click a link it changes colour*/
+a:link,
+a:visited {
+	color: #fb6542;
+		  }
+
+/*create a hover thing so when you hover over the link it changes colour*/
+a:hover {
+	text-decoration: none;
+	color: green;
+		}
+		
+/*Created the ul tag so that a border and background colour is set*/				
+ul{
+	background-color: #eeeeee;
+	border: 5px solid purple;
+	padding: 25px;
+  }
