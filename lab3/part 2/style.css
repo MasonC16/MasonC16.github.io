@@ -9,6 +9,13 @@ div{
 	vertical-align: center;
 	text-align: center;
 	line-height: 200px;
+	/*I found this rem size by looking up a px to rem conversion chart*/
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	font-size: 1.1rem;
+	border-style: solid;
+	border-color: #980000;
+	border-width: 1px;
 	width: 200px;
 	height: 200px;
 	background-color: red;
