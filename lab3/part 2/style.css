@@ -3,3 +3,13 @@ html {
 }
 
 /* Your CSS below here */
+
+div{
+	margin: auto;
+	vertical-align: center;
+	text-align: center;
+	line-height: 200px;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
