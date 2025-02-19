@@ -1,22 +1,55 @@
+/*
+	Name: Mason Cutts
+	File: index.html
+	Date: 14 February 2025
+	This file is html to display a cool looking box
+*/
+
 html {
   font-family: sans-serif;
 }
 
-/* Your CSS below here */
+/* Your CSS below here */	
 
 div{
+	/*stuff to position the box in the top middle of the screen*/
 	margin: auto;
 	vertical-align: center;
+	
+	/*stuff to alight the text position, the shadow and the colour of the text*/
 	text-align: center;
 	line-height: 200px;
-	/*I found this rem size by looking up a px to rem conversion chart*/
 	color: white;
 	text-shadow: 1px 1px 1px black;
+	
+	/*I found this rem size by looking up a px to rem conversion chart*/
 	font-size: 1.1rem;
+	
+	/*stuff for styling the border around the box*/
 	border-style: solid;
 	border-color: #980000;
 	border-width: 1px;
+	border-radius: 10px;
+	
+	/*the colour for the background of the box*/
+	background-color: red;
+	
+	/*For creating the gradient in the background of the box*/
+	background-image:
+		linear-gradient(
+			135deg,
+			rgba(0, 0, 0, 0%),
+			rgba(0, 0, 0, 20%) 30%
+		);
+		
+	/*the box shadow stuff, first two are for the inside of the of and the last one is for the outside of the box*/
+	box-shadow: 
+		inset 2px 2px 3px rgba(255, 255, 255, 60%),
+		inset -2px -2px 3px rgba(0, 0, 0, 60%),
+		2px 2px 5px black
+		;
+		
+	/*The size of the box*/
 	width: 200px;
 	height: 200px;
-	background-color: red;
 }
