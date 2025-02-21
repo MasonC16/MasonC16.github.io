@@ -5,6 +5,7 @@
 	This file is css for displaying a webpage of hot air balloons
 */
 
+/*I only commented stuff that I changed*/
 
 body {
     background-color: #fff;
@@ -25,11 +26,14 @@ body {
     max-width: 980px;
   }
   
-  /*edit this*/
+  /*Adjusting the position of the grid of photos to the right side of the screen beside the text*/
   .grid {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	gap: 20px
   }
   
   /*Making the navigation bar stay at the top of the screen if the user scrolls down the page*/
@@ -64,6 +68,7 @@ body {
 	float: right;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 1px;
   }
 
   /*Moving the top picture to the left of the text and creating the spacing to match the example*/
