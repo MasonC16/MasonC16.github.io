@@ -56,14 +56,19 @@ body {
     padding: .5em 1em;
   }
   
-  /*edit this*/
+  /*Putting the pictures in a grid like pattern with two in each row and three columns*/
   .photos {
     list-style: none;
     margin: 0;
     padding: 0;
+	float: right;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
   }
 
-  /*edit this*/
+  /*Moving the top picture to the left of the text and creating the spacing to match the example*/
   .feature {
       width: 200px;
+	  float: left;
+	  margin: 0px 20px 20px 0px;
   }
