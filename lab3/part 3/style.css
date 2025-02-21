@@ -1,5 +1,3 @@
-/* General setup */
-
 /*
 	Name: Mason Cutts
 	File: index.html
@@ -49,10 +47,10 @@ header, footer {
   border-bottom: 5px solid #a66;
 }
 
-/* WRITE YOUR CODE BELOW HERE */
+/*Below this is all the stuff I added*/
 
-
-
+/*Stuff to create the fonts in the CSS file*/
+/*Serif font that I added*/
 @font-face {
     font-family: 'Vogue';
     src: url('Vogue-Regular.ttf') format('truetype');
@@ -61,6 +59,7 @@ header, footer {
 	font-display: swap;
 }
 
+/*Sans-Serif font that I added*/
 @font-face {
     font-family: 'Oswald';
     src: url('Oswald-Bold.ttf') format('truetype');
@@ -69,24 +68,32 @@ header, footer {
     font-display: swap;
 }
 
+
+/*Adjusting the fonts for the website*/
+
+/*Making the file default font the serif imported font*/
 html{
 	font-family: Vogue, serif;
 	font-size: 10px;
 }
 
+/*Making the header 1 and header 2 default font the sans-serif imported font*/
 h1, h2 {
 	font-family: Oswald, sans-serif;
 }
 
+/*Adjusting the positioning and the font characteristics of anyhting that uses header 1*/
 h1{
 	font-size: 5rem;
 	text-align: center;
 }
 
+/*Adjusting the font characteristics of anyhting that uses header 2*/
 h2{
 	font-size: 3rem;
 }
 
+/*Adjusting the font, spacing and line characteristics of anyhting that uses header p and li*/
 p,li{
 	font-size: 1.5rem;
 	line-height: 1.5;
@@ -94,6 +101,32 @@ p,li{
 	word-spacing: 3px;
 }
 
+/*Adding an indent characteristic of anyhting has h2 and p*/
 section h2 + p{
 	text-indent: 20px;
+}
+
+
+/*This is for the links on the page*/
+
+/*Removes the outline from everything that uses a*/
+a{
+	outline: none;
+}
+
+/*Changing the colour of the links to be like a very light salmon colour I guess*/
+a:link, a:visited{
+	color: #a66;
+}
+
+/*Making it so when you hover or focus on a link, it removes the underline*/
+a:focus, a:hover{
+	text-decoration: none;
+}
+
+/*Adding the little picture beside any of the links that redirect to an external webpage*/
+a[href*="http"]{
+	padding-right: 20px;
+	background: url(external-link-52.png) no-repeat 100% 0;
+	background-size: 15px 15px;
 }
