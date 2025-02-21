@@ -1,5 +1,12 @@
 /* General setup */
 
+/*
+	Name: Mason Cutts
+	File: index.html
+	Date: 21 February 2025
+	This file is html for displaying a community school page
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -43,3 +50,30 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+
+
+@font-face {
+    font-family: 'Vogue';
+    src: url('Vogue-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('Oswald-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+	font-family: Vogue, serif;
+	font-size: 10px;
+}
+
+h1, h2 {
+	font-family: Oswald, sans-serif;
+}
