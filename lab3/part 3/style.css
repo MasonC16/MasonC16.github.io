@@ -77,3 +77,23 @@ html{
 h1, h2 {
 	font-family: Oswald, sans-serif;
 }
+
+h1{
+	font-size: 5rem;
+	text-align: center;
+}
+
+h2{
+	font-size: 3rem;
+}
+
+p,li{
+	font-size: 1.5rem;
+	line-height: 1.5;
+	letter-spacing: 1px;	
+	word-spacing: 3px;
+}
+
+section h2 + p{
+	text-indent: 20px;
+}
