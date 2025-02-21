@@ -130,3 +130,53 @@ a[href*="http"]{
 	background: url(external-link-52.png) no-repeat 100% 0;
 	background-size: 15px 15px;
 }
+
+
+/*This is for the list/nav menu of things on the right side of the page*/
+
+/*ul and ol elements to make the spacing match with the paragraphs*/
+ul, ol {
+  margin: 1.6rem 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-latin;
+}
+
+/*To remove the bullet points and space out the boxes*/
+nav li {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+/*Makes the boxes bigger*/
+nav ul {
+  padding-left: 0;
+  margin-top: 0.9rem;
+}
+
+/*Stuff to create the boxes around the words*/
+nav li a{
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	font-size: 2rem;
+	border: 1px solid #a66;
+}
+
+/*Changing the colour of the box when its hovered over or focused on*/
+nav li a:focus, nav li a:hover {
+	color: white;
+	background: #a66;
+}
+
+/*Makes it so when the button is clicked on, the background goes black and the text goes to white*/
+nav li a:active{
+	color: white;
+	background: black;
+}
