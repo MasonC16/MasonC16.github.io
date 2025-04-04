@@ -42,6 +42,7 @@ class Ball extends Shape {
 	this.exists = true;
   }
 
+  //thing to draw the circle
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
@@ -49,6 +50,7 @@ class Ball extends Shape {
     ctx.fill();
   }
 
+  //adding stuff to update the thing
   update() {
     if ((this.x + this.size) >= width) {
       this.velX = -(this.velX);
@@ -87,7 +89,7 @@ class Ball extends Shape {
 
 }
 		
-//		
+//creating the evilCircle class	
 class EvilCircle extends Shape {
 	constructor(x,y) {
 		super(x, y, 20, 20);
@@ -95,6 +97,7 @@ class EvilCircle extends Shape {
 		this.color = "white";
 		this.size = 10;
 		
+		//adding events to move the evilcircle with the keys
 		window.addEventListener("keydown", (e) => {
 			switch (e.key) {
 				case "a":
@@ -113,8 +116,54 @@ class EvilCircle extends Shape {
 			});
 		}
 		
+	//	
+	draw() {
+		ctx.beginPath();
+		ctx.strokeStyle = this.color;
+		ctx.lineWidth = 3;
+		ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+		ctx.stroke();
+  }
+  
+  //checking the bounds of the evilcircle and adjusting it so it doesnt go off screen
+	checkBounds() {
+		if ((this.x + this.size) >= width) {
+			this.x -= this.size;
+		}
+
+		if ((this.x - this.size) <= 0) {
+			this.x += this.size;
+		}
+
+		if ((this.y + this.size) >= height) {
+			this.y -= this.size;
+		}
+
+		if ((this.y - this.size) <= 0) {
+			this.y += this.size;
+		}
+	}
+
+//collision detection to remove the balls when the evil circle touches them
+  collisionDetect() {
+    for (const ball of balls) {
+      if (ball.exists) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < this.size + ball.size) {
+          ball.exists = false;
+          count--;
+          para.textContent = 'Ball count: ' + count;
+        }
+      }
+    }
+  }
+  
 }
 
+//creating an array to store all the balls
 const balls = [];
 
 while (balls.length < 25) {
