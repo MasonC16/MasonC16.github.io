@@ -3,19 +3,23 @@
 //Date: 4 April 2025
 //This file is js for displaying bouncing balls on a webpage
 
-// set up canvas
+//adding the count into the top right of the program
+const para = document.querySelector('p');
+let count = 0;
+
+//setup canvas
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-// function to generate random number
+//function to generate random number
 function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-// function to generate random RGB color value
+//function to generate random RGB color value
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
@@ -169,8 +173,8 @@ const balls = [];
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
-    // ball position always drawn at least one ball width
-    // away from the edge of the canvas, to avoid drawing errors
+    //ball position always drawn at least one ball width
+    //away from the edge of the canvas, to avoid drawing errors
     random(0 + size, width - size),
     random(0 + size, height - size),
     random(-7, 7),
@@ -179,20 +183,35 @@ while (balls.length < 25) {
     size
   );
 
-  balls.push(ball);
+   balls.push(ball);
+   count++;
+   para.textContent = 'Ball count: ' + count;
 }
 
+//creating a evilball constant with all its attributes
+const evilBall = new EvilCircle(random(0, width), random(0, height));
+
+//creating a function that will create the different balls
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
+  //for loop to add all the elements to the balls
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if (ball.exists) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
   }
 
+  //adding the evil circle into the program
+  evilBall.draw();
+  evilBall.checkBounds();
+  evilBall.collisionDetect();
+
   requestAnimationFrame(loop);
+  
 }
 
 loop();
