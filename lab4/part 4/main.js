@@ -1,3 +1,8 @@
+//Name: Mason Cutts
+//File: main.js
+//Date: 4 April 2025
+//This file is js for displaying bouncing balls on a webpage
+
 // set up canvas
 
 const canvas = document.querySelector("canvas");
