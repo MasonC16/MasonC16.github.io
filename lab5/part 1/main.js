@@ -1,3 +1,8 @@
+//Name: Mason Cutts
+//File: main.js
+//Date: 9 April 2025
+//This file is js for displaying a wildlife webpage
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
