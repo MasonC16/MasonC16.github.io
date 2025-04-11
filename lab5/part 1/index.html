@@ -40,6 +40,8 @@
       </form>
     </div>
 
+	<!--changed the font and br tags to h# and p-->
+
     <main>
       <article>
         <h2>The trouble with Bears</h2>
@@ -80,6 +82,7 @@
           </tbody>
         </table>
 
+		<!--added alt tags to the images to give a description if they dont load-->
         <h3>Habitats and Eating habits</h3>
         <p>Wild bears eat a variety of meat, fish, fruit, nuts, and other natually growing ingredients. In general they will hunt for food themselves in woodland or rivers, but at a push they will track down their sustenance from farms or country houses. They tend to live in relative isolation, in caves, tents, or cottages.</p>
         <img src="media/wild-bear.jpg" alt="bear standing in water">
@@ -90,8 +93,10 @@
         <p>Bears are romantic creatures by nature, and will naturally look for a mate that they can spend the rest of their lives with. They will woo a potential suitor by making their dwelling look attractive — for example with cave paintings or a bed of reeds in the case of a wild bear, and mood lighting and a Michael Bublé CD in the case of an urban bear.</p>
         <p>The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.</p>
         <audio controls>
-          <source src="media/bear.mp3" type="audio/mp3">
+		<!--added accessibility text and a link to the file for other browser support-->
+          <source src="media/bear.mp3" type="audio/mp3" alt="file:///C:/Users/Mason/OneDrive/Documents/GitHub/MasonC16.github.io/lab5/part%201/media/bear.mp3">
           <source src="media/bear.ogg" type="audio/ogg">
+		  <p> This isn't really an audio fact file about bears. But it is, an audio file that you can transcribe</p>
           <p>It looks like your browser doesn't support HTML5 audio players.</p>
         </audio>
 
@@ -119,7 +124,7 @@
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
-                <input type="submit" value="Submit comment">
+                <input type="submit" value="Submit comment" >
               </div>
             </form>
 

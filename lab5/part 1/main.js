@@ -12,7 +12,7 @@ commentWrapper.style.display = 'none';
 
 showHideBtn.onclick = function() {
   let showHideText = showHideBtn.textContent;
-  if(showHideText === 'Show comments') {
+  if (showHideText === 'Show comments') {
     showHideBtn.textContent = 'Hide comments';
     commentWrapper.style.display = 'block';
   } else {
@@ -20,6 +20,20 @@ showHideBtn.onclick = function() {
     commentWrapper.style.display = 'none';
   }
 };
+
+// adding the accessibility for keys to open and close the comment boxes
+document.addEventListener('keydown', function(event) {
+	//if o is pressed, it will open the comment box
+  if (event.key === 'o' || event.key === 'O') {
+    showHideBtn.textContent = 'Hide comments';
+    commentWrapper.style.display = 'block';
+	//if o is pressed, it will open the comment box
+  } else if (event.key === 'c' || event.key === 'C') {
+    showHideBtn.textContent = 'Show comments';
+    commentWrapper.style.display = 'none';
+  }
+});
+
 
 // functionality for adding a new comment via the comments form
 
